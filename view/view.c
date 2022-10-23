@@ -49,8 +49,8 @@ void drawDarkSquare (BoardPtr board) {
 int view_start(BoardPtr board) {
 
     MLV_create_window( "TP4", "TP4" , width, height );
-    image = MLV_load_image( "imageFull.jpg" );
-    darkImage = MLV_load_image( "black.jpg" );
+    image = MLV_load_image( "assets/imageFull.jpg" );
+    darkImage = MLV_load_image( "assets/black.jpg" );
     int yOutputOffset, xOutputOffset;
     int yOutputImage, xOutputImage;
     int yInputOffset, xInputOffset;
