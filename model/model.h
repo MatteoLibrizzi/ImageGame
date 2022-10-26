@@ -4,11 +4,10 @@
 #include "../types.h"
 #include <MLV/MLV_all.h>
 
-BoardPtr board_init();
-void printBoard(BoardPtr b);
-void handleKey(BoardPtr b, MLV_Keyboard_button key);
-int isGameOver(BoardPtr b);
-void shuffleBoard(BoardPtr b, int n);
-int isValidKey(MLV_Keyboard_button key);
+BoardPtr model_board_init();
+void model_handle_key(BoardPtr b, MLV_Keyboard_button key);
+int model_is_game_over(BoardPtr b);
+void model_shuffle_board(BoardPtr b, int n);
+int model_is_valid_key(MLV_Keyboard_button key);
 
 #endif

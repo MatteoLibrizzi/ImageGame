@@ -1,6 +1,6 @@
 #ifndef _controller_
 #define _controller_
 
-int run_controller();
+int controller_run();
 
 #endif

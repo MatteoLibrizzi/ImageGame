@@ -3,7 +3,7 @@
 
 int view_start();
 int view_update();
-void exit_function(void* data);
-void freeStuff();
+void view_exit_function(void* data);
+void view_free();
 
 #endif

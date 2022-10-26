@@ -1,5 +1,5 @@
-main: main.o view/view.o controller/controller.o model/model.o
-	gcc -o main $^ -lMLV -ansi
+game: main.o view/view.o controller/controller.o model/model.o
+	gcc -o game $^ -lMLV -ansi
 
 main.o: main.c
 	gcc -c $^ -ansi
@@ -18,4 +18,4 @@ clean:
 	rm view/*.o
 	rm controller/*.o
 	rm model/*.o
-	rm main
+	rm game
