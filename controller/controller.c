@@ -29,6 +29,7 @@ int controller_run(unsigned int difficulty) {
         
     }
     view_free();/*free the view*/
+    model_free(board);/*free the board*/
 
     return 0;
 }

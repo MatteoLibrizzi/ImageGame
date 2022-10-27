@@ -11,6 +11,17 @@ enum keyHandling {UP, DOWN, RIGHT, LEFT};/*enum used to handle the keys*/
 
 #define NFUNCTIONS (LEFT+1)
 
+void model_free(BoardPtr board) {
+    free(keyHandlingFunctions);
+    int i, j;
+    for (i=0;i<NROW;i++) {
+        for (j=0;j<NCOL;j++) {
+            free((board->squares)[i][j]);
+        }
+    }
+    free(board);
+}
+
 void move_down (BoardPtr board) {
     SquarePtr emptySquare = board->emptySquare;
     if (emptySquare->row != NROW-1) {/*if it's not on the edge*/
