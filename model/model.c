@@ -79,10 +79,18 @@ BoardPtr model_board_init() {
     board->emptySquare->row = NROW-1;
 
     keyHandlingFunctions = malloc(sizeof(keyHandlingFunction) * NFUNCTIONS);/*key handling functions, only 4 of them*/
+
+    #ifndef REVERSE
+    keyHandlingFunctions[UP] = &move_down;
+    keyHandlingFunctions[DOWN] = &move_up;
+    keyHandlingFunctions[RIGHT] = &move_left;
+    keyHandlingFunctions[LEFT] = &move_right;
+    #else
     keyHandlingFunctions[DOWN] = &move_down;
     keyHandlingFunctions[UP] = &move_up;
     keyHandlingFunctions[LEFT] = &move_left;
     keyHandlingFunctions[RIGHT] = &move_right;
+    #endif
 
     return board;
 }

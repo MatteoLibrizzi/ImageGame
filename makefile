@@ -1,4 +1,6 @@
-game: main.o view/view.o controller/controller.o model/model.o
+
+
+game: main.o view.o controller.o model.o
 	gcc -o game $^ -lMLV -ansi
 
 main.o: main.c
@@ -9,6 +11,7 @@ view.o: view/view.c
 
 model.o: model/model.c
 	gcc -c $^ -ansi
+	#gcc -c $^ -DREVERSE -ansi
 
 controller.o: controller/controller.c
 	gcc -c $^ -ansi
