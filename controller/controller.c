@@ -8,7 +8,7 @@ int controller_run(unsigned int difficulty) {
     int stop = 0;/*stopping when ==1*/
     BoardPtr board = model_board_init();
 
-    model_shuffle_board(board,difficulty);/*shuffling the board according to requirements*/
+    /*model_shuffle_board(board,difficulty);/*shuffling the board according to requirements*/
 
     MLV_execute_at_exit(view_exit_function,&stop);/*binding the function to execute at exit (in view.c)*/
     view_start(board);/*view element start*/
