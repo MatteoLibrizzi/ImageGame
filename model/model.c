@@ -81,7 +81,7 @@ BoardPtr model_board_init() {
     keyHandlingFunctions = malloc(sizeof(keyHandlingFunction) * NFUNCTIONS);/*key handling functions, only 4 of them*/
 
     #ifndef REVERSE
-    keyHandlingFunctions[UP] = &move_down;
+    keyHandlingFunctions[UP] = &move_down;/*edit makefile to reverse the contols*/
     keyHandlingFunctions[DOWN] = &move_up;
     keyHandlingFunctions[RIGHT] = &move_left;
     keyHandlingFunctions[LEFT] = &move_right;
